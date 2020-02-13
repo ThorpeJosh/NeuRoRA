@@ -248,11 +248,11 @@ import time
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = Net().to(device) 
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001, weight_decay=1e-4)
-checkpoint = torch.load(PATH)
-model.load_state_dict(checkpoint['model_state_dict'])
-optimizer.load_state_dict(checkpoint['optimizer_state_dict']) 
-for g in optimizer.param_groups:
-    g['lr'] = 0.0001
+#checkpoint = torch.load(PATH)
+#model.load_state_dict(checkpoint['model_state_dict'])
+#optimizer.load_state_dict(checkpoint['optimizer_state_dict']) 
+#for g in optimizer.param_groups:
+#    g['lr'] = 0.0001
 
 # %%
 PATH = 'checkpoint/outliers_detect_new222222.pth' 
